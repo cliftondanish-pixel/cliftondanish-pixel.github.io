@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Clifton Danish Portfolio - Modern Dark Aesthetic & Design Tokens
+   Alex Rivera Portfolio - Modern Dark Aesthetic & Design Tokens
    ========================================================================== */
 
 :root {
@@ -268,7 +268,7 @@ body {
 }
 
 /* ==========================================================================
-   Header & Navbar
+   Header & Navbar (Pixel-Perfect Alignment)
    ========================================================================== */
 
 .navbar {
@@ -278,7 +278,7 @@ body {
   width: 100%;
   height: var(--nav-height);
   z-index: 100;
-  background: rgba(9, 10, 15, 0.75);
+  background: rgba(9, 10, 15, 0.82);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-color);
@@ -286,22 +286,24 @@ body {
 }
 
 .navbar.scrolled {
-  background: rgba(9, 10, 15, 0.92);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+  background: rgba(9, 10, 15, 0.96);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
 }
 
 .nav-container {
-  max-width: var(--container-max-width);
+  max-width: 1360px;
+  width: 100%;
   margin: 0 auto;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 28px;
+  gap: 20px;
 }
 
 .brand-logo {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text-main);
   text-decoration: none;
@@ -309,6 +311,9 @@ body {
   letter-spacing: -0.5px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1;
 }
 
 .brand-logo:hover .accent-text {
@@ -318,16 +323,23 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  justify-content: center;
+  gap: 24px;
+  white-space: nowrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-item {
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   position: relative;
   transition: color var(--transition-fast);
+  line-height: 1;
+  padding: 4px 0;
 }
 
 .nav-item::after {
@@ -355,21 +367,25 @@ body {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  flex-shrink: 0;
+  line-height: 1;
 }
 
 /* Status Badge - Pulse Indicator */
 .status-badge {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
   background: rgba(16, 185, 129, 0.1);
   border: 1px solid rgba(16, 185, 129, 0.3);
-  padding: 5px 12px;
+  padding: 6px 12px;
   border-radius: var(--radius-full);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
   color: #34d399;
+  white-space: nowrap;
+  line-height: 1;
 }
 
 .pulse-dot {
@@ -1704,15 +1720,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.6rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
+@media (max-width: 1024px) {
   .nav-links {
     position: fixed;
     top: var(--nav-height);
@@ -1734,6 +1742,21 @@ body {
 
   .mobile-toggle {
     display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .status-badge {
+    padding: 4px 8px;
+    font-size: 0.72rem;
   }
 
   .form-row {
