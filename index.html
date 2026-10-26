@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clifton Danish - Computer Science Engineer & Software Developer Portfolio. Proficient in Java, SQL, JavaScript, HTML, CSS, and Full-Stack Web Development.">
+  <meta name="keywords" content="Clifton Danish, Software Developer, Computer Science Engineer, Java, SQL, HTML, CSS, JavaScript, Portfolio, Chennai, Rajalakshmi Engineering College">
+  <meta name="author" content="Clifton Danish">
+  <title>Clifton Danish | Computer Science Engineer & Software Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Particle Canvas -->
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" id="brandLogo">
+        <span class="code-bracket">&lt;</span>Clifton<span class="accent-text">.Dev</span><span class="code-bracket"> /&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#certifications" class="nav-item">Certifications</a>
+        <a href="#education" class="nav-item">Education</a>
+        <a href="#terminal-section" class="nav-item">CLI Terminal</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Availability indicator -->
+        <div class="status-badge" title="Actively seeking software developer opportunities">
+          <span class="pulse-dot"></span>
+          <span class="status-label">Open to Roles</span>
+        </div>
+
+        <!-- Theme Accent Switcher -->
+        <button class="theme-btn" id="themeBtn" title="Switch Theme Color Accent" aria-label="Switch Theme Accent">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button class="btn btn-secondary resume-btn" id="resumeModalBtn">View Resume</button>
+
+        <!-- Mobile hamburger toggle -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main id="main-content">
+    <section class="hero-section" id="hero">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span class="tech-tag-icon">⚡</span>
+            <span>Backend Python Developer @ Stackly &bull; FastAPI</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Clifton Danish</span><br>
+            <span class="typing-container">
+              <span class="dynamic-role" id="dynamicRole">Software Developer</span>
+              <span class="cursor">|</span>
+            </span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Backend Python Developer at Stackly specializing in high-performance asynchronous RESTful APIs using FastAPI and SQL. Computer Science Engineer from Rajalakshmi Engineering College with a strong foundation in backend architecture and full-stack web applications.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" id="viewWorkBtn">
+              Explore Projects
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            
+            <a href="#contact" class="btn btn-outline" id="contactMeBtn">
+              Get in Touch
+            </a>
+
+            <a href="https://github.com/cliftondanish-pixel" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="GitHub: cliftondanish-pixel">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/clifton-danish-j-1234567890cd" target="_blank" rel="noopener noreferrer" class="btn btn-outline" title="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              LinkedIn
+            </a>
+
+            <button class="btn btn-ghost copy-email-btn" id="copyEmailBtn" data-email="cliftondanish3@gmail.com" title="Click to copy email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>cliftondanish3@gmail.com</span>
+            </button>
+          </div>
+
+          <!-- Quick Stats Bar -->
+          <div class="stats-bar">
+            <div class="stat-card">
+              <span class="stat-number" style="color: var(--accent-secondary);">Stackly</span>
+              <span class="stat-desc">Backend Python Dev</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">FastAPI</span>
+              <span class="stat-desc">Core Tech Stack</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">7.58</span>
+              <span class="stat-desc">B.E. CSE CGPA</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-number">3+</span>
+              <span class="stat-desc">Shipped Projects</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-glow-ring"></div>
+            <div class="avatar-card glass-panel">
+              <img src="assets/images/avatar.jpg" alt="Portrait of Clifton Danish - Software Developer" class="avatar-img" id="heroAvatar">
+              
+              <div class="floating-badge badge-top-right">
+                <div class="badge-icon">⚡</div>
+                <div class="badge-text">
+                  <span class="b-title">Stackly Developer</span>
+                  <span class="b-sub">Python &bull; FastAPI</span>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-left">
+                <div class="badge-icon">🌐</div>
+                <div class="badge-text">
+                  <span class="b-title">Web Technologies</span>
+                  <span class="b-sub">HTML &bull; CSS &bull; JS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CAREER OBJECTIVE & PROFILE</span>
+          <h2 class="section-title">Passionate About Building Robust & User-Centric Software</h2>
+          <p class="section-desc">Eager to contribute technical skills and innovative problem-solving in a dynamic software engineering team.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-narrative glass-panel">
+            <h3>Profile Summary</h3>
+            <p>
+              I am currently working as a <strong>Backend Python Developer at Stackly</strong> (since November 2025), where I architect and maintain robust, asynchronous backend services and REST APIs powered by <strong>FastAPI</strong> and relational <strong>SQL databases</strong>.
+            </p>
+            <p>
+              Based in <strong>Chennai, Tamil Nadu</strong>, I hold a Bachelor of Engineering in Computer Science and Engineering from <strong>Rajalakshmi Engineering College</strong> (7.58 CGPA, 2020–2024). My engineering philosophy centers on clean code architecture, data validation, testability, and delivering low-latency production services.
+            </p>
+
+            <div class="highlight-boxes">
+              <div class="h-box">
+                <div class="h-icon">☕</div>
+                <div class="h-content">
+                  <h4>Backend & Database Engineering</h4>
+                  <p>Object-Oriented Programming with Java, efficient data retrieval and schema management with SQL.</p>
+                </div>
+              </div>
+              <div class="h-box">
+                <div class="h-icon">🎨</div>
+                <div class="h-content">
+                  <h4>Front-End Web Development</h4>
+                  <p>Crafting accessible, responsive web designs and dynamic DOM interactions using HTML5, CSS3, and JavaScript.</p>
+                </div>
+              </div>
+              <div class="h-box">
+                <div class="h-icon">🤝</div>
+                <div class="h-content">
+                  <h4>Collaborative & Soft Skills</h4>
+                  <p>Time Management, Problem Solving, Decision Making, and active peer collaboration in system testing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-metrics glass-panel">
+            <h3>Core Competency Proficiency</h3>
+            
+            <div class="pillar-item">
+              <div class="pillar-header">
+                <span class="pillar-title">Java Programming & OOP</span>
+                <span class="pillar-score">90%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 90%;"></div></div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-header">
+                <span class="pillar-title">SQL & Database Management</span>
+                <span class="pillar-score">92%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 92%;"></div></div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-header">
+                <span class="pillar-title">HTML5, CSS3 & Responsive UI</span>
+                <span class="pillar-score">94%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 94%;"></div></div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-header">
+                <span class="pillar-title">JavaScript & Web Logic</span>
+                <span class="pillar-score">88%</span>
+              </div>
+              <div class="progress-track"><div class="progress-fill" style="width: 88%;"></div></div>
+            </div>
+
+            <div class="callout-card">
+              <div class="quote-symbol">“</div>
+              <p class="quote-text">Driven by a passion for computer science and continuous learning. Focused on turning complex business logic into intuitive, efficient, and well-tested software applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">TECHNICAL ARSENAL</span>
+          <h2 class="section-title">Skills & Capabilities</h2>
+          <p class="section-desc">Practical skills honed through engineering coursework, certifications, and hands-on project builds.</p>
+        </div>
+
+        <!-- Filter tabs for skills -->
+        <div class="skills-filter-tabs">
+          <button class="skill-tab active" data-filter="all">All Skills</button>
+          <button class="skill-tab" data-filter="languages">Programming Languages</button>
+          <button class="skill-tab" data-filter="web">Web Technologies</button>
+          <button class="skill-tab" data-filter="database">Databases & Concepts</button>
+          <button class="skill-tab" data-filter="tools">Developer Tools & DevOps</button>
+          <button class="skill-tab" data-filter="soft">Soft Skills & Spoken</button>
+        </div>
+
+        <div class="skills-grid" id="skillsGrid">
+          <!-- Stackly Core Stack -->
+          <div class="skill-card glass-panel" data-cat="languages">
+            <div class="skill-icon-wrap">🐍</div>
+            <div class="skill-info">
+              <h4>Python</h4>
+              <span class="skill-level">FastAPI, AsyncIO, OOP, Backend</span>
+            </div>
+            <span class="skill-badge" style="color: #38bdf8; background: rgba(56, 189, 248, 0.1);">Stackly Core</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-cat="languages">
+            <div class="skill-icon-wrap">⚡</div>
+            <div class="skill-info">
+              <h4>FastAPI</h4>
+              <span class="skill-level">Async Endpoints, Pydantic, OpenAPI</span>
+            </div>
+            <span class="skill-badge" style="color: #34d399; background: rgba(16, 185, 129, 0.1);">Production</span>
+          </div>
+          <!-- Programming Languages -->
+          <div class="skill-card glass-panel" data-cat="languages">
+            <div class="skill-icon-wrap">☕</div>
+            <div class="skill-info">
+              <h4>Java</h4>
+              <span class="skill-level">Core OOP, Backend & Collections</span>
+            </div>
+            <span class="skill-badge">Primary</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-cat="languages">
+            <div class="skill-icon-wrap">🗄️</div>
+            <div class="skill-info">
+              <h4>SQL</h4>
+              <span class="skill-level">Queries, Joins, Triggers, CRUD</span>
+            </div>
+            <span class="skill-badge">Core DB</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-cat="languages">
+            <div class="skill-icon-wrap">💛</div>
+            <div class="skill-info">
+              <h4>JavaScript (ES6+)</h4>
+              <span class="skill-level">DOM Manipulation, Async & Events</span>
+            </div>
+            <span class="skill-badge">Web Logic</span>
+          </div>
+
+          <!-- Web Technologies -->
+          <div class="skill-card glass-panel" data-cat="web">
+            <div class="skill-icon-wrap">🌐</div>
+            <div class="skill-info">
+              <h4>HTML5</h4>
+              <span class="skill-level">Semantic Structure & Web Standards</span>
+            </div>
+            <span class="skill-badge">Proficient</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-cat="web">
+            <div class="skill-icon-wrap">🎨</div>
+            <div class="skill-info">
+              <h4>CSS3</h4>
+              <span class="skill-level">Flexbox, Grid, Animations, Responsive</span>
+            </div>
+            <span class="skill-badge">Proficient</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-cat="web">
+            <div class="skill-icon-wrap">📱</div>
+            <div class="skill-info">
+              <h4>Responsive Web Design</h4>
+              <span class="skill-level">Mobile-First Layouts & Cross-Browser</span>
+            </div>
+            <span class="skill-badge">Frontend</span>
+          </div>
+
+          <!-- Databases & Concepts -->
+          <div class="skill-card glass-panel" data-cat="database">
+            <div class="skill-icon-wrap">🗃️</div>
+            <div class="skill-info">
+              <h4>Database Management</h4>
+              <span class="skill-level">Relational Modeling & Normalization</span>
+            </div>
+            <span class="skill-badge">Oracle Certified</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-cat="database">
+            <div class="skill-info">
+              <h4>System Testing & Validation</h4>
+              <span class="skill-level">Debugging, Verification & Peer Reviews</span>
+            </div>
+            <span class="skill-badge">Practiced</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-cat="database">
+            <div class="skill-icon-wrap">🧩</div>
+            <div class="skill-info">
+              <h4>Data Structures & Algorithms</h4>
+              <span class="skill-level">Fundamental CS Concepts & Efficiency</span>
+            </div>
+            <span class="skill-badge">CS Core</span>
+          </div>
+
+          <!-- Developer Tools & API Testing -->
+          <div class="skill-card glass-panel" data-cat="tools">
+            <div class="skill-icon-wrap">📑</div>
+            <div class="skill-info">
+              <h4>Swagger UI & OpenAPI</h4>
+              <span class="skill-level">API Testing, Schema Specs & Docs</span>
+            </div>
+            <span class="skill-badge" style="color: #10b981; background: rgba(16, 185, 129, 0.1);">Stackly API</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-cat="tools">
+            <div class="skill-icon-wrap">🐙</div>
+            <div class="skill-info">
+              <h4>Git & GitHub</h4>
+              <span class="skill-level">Version Control, PRs, Branching</span>
+            </div>
+            <span class="skill-badge" style="color: #a78bfa; background: rgba(167, 139, 250, 0.1);">Essential</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-cat="tools">
+            <div class="skill-icon-wrap">🐳</div>
+            <div class="skill-info">
+              <h4>Docker</h4>
+              <span class="skill-level">Containerization & Isolated Environments</span>
+            </div>
+            <span class="skill-badge" style="color: #38bdf8; background: rgba(56, 189, 248, 0.1);">DevOps</span>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="skill-card glass-panel" data-cat="soft">
+            <div class="skill-icon-wrap">💡</div>
+            <div class="skill-info">
+              <h4>Problem Solving</h4>
+              <span class="skill-level">Analytical Debugging & Logical Thinking</span>
+            </div>
+            <span class="skill-badge">Soft Skill</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-cat="soft">
+            <div class="skill-icon-wrap">⏱️</div>
+            <div class="skill-info">
+              <h4>Time Management</h4>
+              <span class="skill-level">Structured Execution & Milestone Delivery</span>
+            </div>
+            <span class="skill-badge">Soft Skill</span>
+          </div>
+
+          <div class="skill-card glass-panel" data-cat="soft">
+            <div class="skill-icon-wrap">🗣️</div>
+            <div class="skill-info">
+              <h4>English & Tamil</h4>
+              <span class="skill-level">Fluent Written & Verbal Communication</span>
+            </div>
+            <span class="skill-badge">Languages</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">PROJECT PORTFOLIO</span>
+          <h2 class="section-title">Featured Software Engineering Projects</h2>
+          <p class="section-desc">Practical applications demonstrating full-stack engineering, database integration, and software development lifecycles.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Job Portal -->
+          <article class="project-card glass-panel" id="project-card-1">
+            <div class="project-image-wrap">
+              <img src="assets/images/project1.jpg" alt="Job Portal Web Application Preview" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm view-details-btn" data-project="jobportal">
+                  View Project Details
+                </button>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-badges">
+                <span class="p-badge">Web Application</span>
+                <span class="p-badge p-highlight">Full Functional</span>
+              </div>
+              <h3 class="project-title">Job Portal Platform</h3>
+              <p class="project-summary">
+                Developed a fully functional job portal connecting job seekers with prospective employers. Created a responsive, user-friendly interface with HTML, CSS, and JavaScript, and implemented database interactions using SQL to manage listings and profiles.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">SQL Database</span>
+                <span class="tag">User Profiles</span>
+              </div>
+              <div class="project-links">
+                <button class="text-link view-details-btn" data-project="jobportal">
+                  Explore Architecture &rarr;
+                </button>
+                <a href="#contact" class="text-link">Inquire Demo &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Inventory Management System -->
+          <article class="project-card glass-panel" id="project-card-2">
+            <div class="project-image-wrap">
+              <img src="assets/images/project2.jpg" alt="Inventory Management System Preview" class="project-img">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm view-details-btn" data-project="inventory">
+                  View Project Details
+                </button>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-badges">
+                <span class="p-badge">Enterprise Backend</span>
+                <span class="p-badge p-highlight">Java Application</span>
+              </div>
+              <h3 class="project-title">Inventory Management System</h3>
+              <p class="project-summary">
+                Designed and developed an inventory tracking application helping businesses monitor stock levels and process orders. Employed Java for efficient backend processing, structured SQL queries for retrieval, and collaborated on system testing.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Java</span>
+                <span class="tag">SQL</span>
+                <span class="tag">OOP Design</span>
+                <span class="tag">Stock Tracking</span>
+                <span class="tag">System Testing</span>
+              </div>
+              <div class="project-links">
+                <button class="text-link view-details-btn" data-project="inventory">
+                  Explore Architecture &rarr;
+                </button>
+                <a href="#contact" class="text-link">Inquire Demo &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: E-Commerce Platform -->
+          <article class="project-card glass-panel" id="project-card-3" style="grid-column: 1 / -1; max-width: 900px; margin: 0 auto; width: 100%;">
+            <div class="project-content" style="padding: 36px;">
+              <div class="project-badges">
+                <span class="p-badge">Full-Stack Application</span>
+                <span class="p-badge p-highlight">E-Commerce & Auth</span>
+              </div>
+              <h3 class="project-title">E-Commerce Web Application</h3>
+              <p class="project-summary">
+                Contributed to an e-commerce platform that facilitates online retail transactions. Integrated secure user authentication and payment processing routines using Java and SQL, achieving a seamless user experience by enhancing UI elements with HTML, CSS, and JavaScript.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Java</span>
+                <span class="tag">SQL</span>
+                <span class="tag">User Authentication</span>
+                <span class="tag">Payment Processing</span>
+                <span class="tag">HTML / CSS / JS</span>
+              </div>
+              <div class="project-links">
+                <button class="text-link view-details-btn" data-project="ecommerce">
+                  Explore Implementation Details &rarr;
+                </button>
+                <a href="#contact" class="text-link">Contact Clifton &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section certifications-section" id="certifications">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">CREDENTIALS</span>
+          <h2 class="section-title">Professional Certifications</h2>
+          <p class="section-desc">Recognized industry and academic certifications validating core engineering competencies.</p>
+        </div>
+
+        <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          <!-- Cert 1 -->
+          <div class="skill-card glass-panel" style="flex-direction: column; align-items: flex-start; gap: 14px; padding: 28px;">
+            <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+              <span style="font-size: 2.2rem;">🏛️</span>
+              <span class="skill-badge" style="color: #34d399; background: rgba(16, 185, 129, 0.1);">Verified</span>
+            </div>
+            <div>
+              <h3 style="font-size: 1.25rem; color: var(--text-main); margin-bottom: 6px;">Database Programming on SQL</h3>
+              <p style="color: var(--accent-secondary); font-size: 0.95rem; font-weight: 600; margin-bottom: 8px;">Oracle Academy</p>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">Comprehensive training in database modeling, relational operations, subqueries, indexing, and SQL optimization.</p>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="skill-card glass-panel" style="flex-direction: column; align-items: flex-start; gap: 14px; padding: 28px;">
+            <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+              <span style="font-size: 2.2rem;">☕</span>
+              <span class="skill-badge" style="color: #38bdf8; background: rgba(56, 189, 248, 0.1);">Wipro TalentNext</span>
+            </div>
+            <div>
+              <h3 style="font-size: 1.25rem; color: var(--text-main); margin-bottom: 6px;">Java Full Stack Completion</h3>
+              <p style="color: var(--accent-secondary); font-size: 0.95rem; font-weight: 600; margin-bottom: 8px;">Wipro TalentNext</p>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">Extensive full-stack development curriculum focusing on Core Java, backend architectures, databases, and web services.</p>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="skill-card glass-panel" style="flex-direction: column; align-items: flex-start; gap: 14px; padding: 28px;">
+            <div style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+              <span style="font-size: 2.2rem;">🌐</span>
+              <span class="skill-badge" style="color: #a78bfa; background: rgba(167, 139, 250, 0.1);">Completed</span>
+            </div>
+            <div>
+              <h3 style="font-size: 1.25rem; color: var(--text-main); margin-bottom: 6px;">Front End Web Development</h3>
+              <p style="color: var(--accent-secondary); font-size: 0.95rem; font-weight: 600; margin-bottom: 8px;">Rinex Technologies</p>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">Mastering modern web layout design, responsive components, CSS styling paradigms, and interactive JavaScript.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section (Stackly) -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">PROFESSIONAL EXPERIENCE</span>
+          <h2 class="section-title">Industry Experience & Current Role</h2>
+          <p class="section-desc">Delivering production-grade backend engineering and high-performance API services.</p>
+        </div>
+
+        <div class="timeline" style="max-width: 860px; margin: 0 auto;">
+          <div class="timeline-item">
+            <div class="timeline-dot" style="border-color: #38bdf8; box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);"></div>
+            <div class="timeline-date">Nov 2025 &mdash; Present</div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-role-header">
+                <div>
+                  <h3 class="role-title" style="color: var(--text-main);">Backend Python Developer</h3>
+                  <span class="role-company" style="color: var(--accent-secondary); font-weight: 600;">Stackly &bull; Backend Engineering Team</span>
+                </div>
+                <span class="role-type" style="background: rgba(56, 189, 248, 0.12); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">Full-Time &bull; Current Role</span>
+              </div>
+              <ul class="role-points">
+                <li>Designing, developing, and deploying asynchronous, low-latency RESTful APIs using <strong>FastAPI</strong> and <strong>Python</strong> for core application workflows.</li>
+                <li>Structuring scalable <strong>SQL database schemas</strong>, writing optimized relational queries, and managing efficient data transactions.</li>
+                <li>Implementing strict request/response data validation and serialization models with <strong>Pydantic</strong> and automated OpenAPI documentation.</li>
+                <li>Collaborating within the backend team on feature delivery, unit testing, debugging, and continuous system validation.</li>
+              </ul>
+              <div class="role-tags">
+                <span style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">Python</span>
+                <span style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);">FastAPI</span>
+                <span>RESTful APIs</span>
+                <span>SQL / Relational DB</span>
+                <span>Pydantic</span>
+                <span>AsyncIO</span>
+                <span>Backend Architecture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Timeline Section -->
+    <section class="section experience-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">ACADEMIC BACKGROUND</span>
+          <h2 class="section-title">Education & Qualifications</h2>
+          <p class="section-desc">Formal computer science education and academic milestones.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Education 1: College -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2020 &mdash; 2024</div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-role-header">
+                <div>
+                  <h3 class="role-title">Bachelor of Engineering (B.E.) &mdash; Computer Science and Engineering</h3>
+                  <span class="role-company">Rajalakshmi Engineering College &bull; Chennai, Tamil Nadu</span>
+                </div>
+                <span class="role-type">7.58 CGPA</span>
+              </div>
+              <ul class="role-points">
+                <li>Acquired comprehensive theoretical and practical knowledge in Object-Oriented Programming (Java), Database Management Systems (SQL), Operating Systems, and Web Technologies.</li>
+                <li>Completed multiple engineering applications including a full Job Portal and Inventory Management System.</li>
+                <li>Engaged in collaborative project work, peer code validation, and system testing methodologies.</li>
+              </ul>
+              <div class="role-tags">
+                <span>Computer Science</span>
+                <span>Java</span>
+                <span>SQL</span>
+                <span>Web Technologies</span>
+                <span>Algorithms</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education 2: Class XII -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2019 &mdash; 2020</div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-role-header">
+                <div>
+                  <h3 class="role-title">Higher Secondary Education (Class XII &bull; CBSE)</h3>
+                  <span class="role-company">Francis Xavier's School</span>
+                </div>
+                <span class="role-type">76.6%</span>
+              </div>
+              <ul class="role-points">
+                <li>Focused on Mathematics, Physics, Chemistry, and Computer Science fundamentals.</li>
+                <li>Built strong problem-solving and analytical reasoning skills leading to engineering admission.</li>
+              </ul>
+              <div class="role-tags">
+                <span>CBSE Board</span>
+                <span>Mathematics</span>
+                <span>Computer Science</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education 3: Class X -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2017 &mdash; 2018</div>
+            <div class="timeline-card glass-panel">
+              <div class="timeline-role-header">
+                <div>
+                  <h3 class="role-title">Secondary School Leaving Certificate (Class X &bull; State Board)</h3>
+                  <span class="role-company">St. Xavier's Matric. Hr. Sec. School</span>
+                </div>
+                <span class="role-type">87.6%</span>
+              </div>
+              <ul class="role-points">
+                <li>Graduated with distinction (87.6%), building exceptional foundational academic performance.</li>
+              </ul>
+              <div class="role-tags">
+                <span>State Board</span>
+                <span>Academic Distinction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Developer CLI Terminal Section -->
+    <section class="section terminal-section" id="terminal-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">INTERACTIVE SANDBOX</span>
+          <h2 class="section-title">Developer Terminal</h2>
+          <p class="section-desc">Run interactive commands directly inside this sandbox terminal to query Clifton's resume and stack.</p>
+        </div>
+
+        <div class="terminal-window glass-panel" id="terminalWindow">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="tdot tdot-red"></span>
+              <span class="tdot tdot-yellow"></span>
+              <span class="tdot tdot-green"></span>
+            </div>
+            <div class="terminal-title">clifton@portfolio: ~ (zsh)</div>
+            <div class="terminal-hints">Type <span class="cmd-pill">help</span> for commands</div>
+          </div>
+
+          <div class="terminal-body" id="terminalBody">
+            <div class="terminal-output" id="terminalOutput">
+              <div class="t-line">Welcome to Clifton Danish's interactive CLI portfolio session.</div>
+              <div class="t-line text-muted">Type <span class="t-highlight">help</span> to list commands, or try <span class="t-highlight">skills</span>, <span class="t-highlight">projects</span>, <span class="t-highlight">education</span>, <span class="t-highlight">certifications</span>, <span class="t-highlight">contact</span>, or <span class="t-highlight">hire</span>.</div>
+            </div>
+
+            <div class="terminal-prompt-line">
+              <span class="t-prompt">clifton@portfolio:~$</span>
+              <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="Type a command and press Enter...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Hire Me Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="section-tag">GET IN TOUCH</span>
+            <h2 class="section-title">Let's Connect & Discuss Opportunities</h2>
+            <p class="section-desc">
+              I am actively seeking Software Developer and Engineering roles where I can contribute my Java, SQL, and Web Development skills to build high-impact applications.
+            </p>
+
+            <div class="contact-channels">
+              <div class="channel-card glass-panel">
+                <div class="c-icon">📬</div>
+                <div>
+                  <div class="c-label">Direct Email</div>
+                  <a href="mailto:cliftondanish3@gmail.com" class="c-link">cliftondanish3@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="channel-card glass-panel">
+                <div class="c-icon">📞</div>
+                <div>
+                  <div class="c-label">Mobile Phone</div>
+                  <a href="tel:+919361812603" class="c-link">+91 936-181-2603</a>
+                </div>
+              </div>
+
+              <div class="channel-card glass-panel">
+                <div class="c-icon">📍</div>
+                <div>
+                  <div class="c-label">Location</div>
+                  <div class="c-value">Chennai, Tamil Nadu - 600063, India</div>
+                </div>
+              </div>
+
+              <div class="channel-card glass-panel">
+                <div class="c-icon">🗣️</div>
+                <div>
+                  <div class="c-label">Languages</div>
+                  <div class="c-value">English &bull; Tamil</div>
+                </div>
+              </div>
+              <div class="channel-card glass-panel">
+                <div class="c-icon">🌐</div>
+                <div>
+                  <div class="c-label">Online Profiles</div>
+                  <div class="social-links" style="margin-top: 8px; display: flex; gap: 8px; flex-wrap: wrap;">
+                    <a href="https://github.com/cliftondanish-pixel" target="_blank" rel="noopener noreferrer" class="social-badge">GitHub: cliftondanish-pixel</a>
+                    <a href="https://www.linkedin.com/in/clifton-danish-j-1234567890cd" target="_blank" rel="noopener noreferrer" class="social-badge">LinkedIn Profile</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-card glass-panel">
+            <h3 class="form-title">Send a Direct Message</h3>
+            <p class="form-subtitle">Messages are transmitted directly. I will respond promptly within 24 hours.</p>
+
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="userName">Your Name <span class="req">*</span></label>
+                  <input type="text" id="userName" name="name" placeholder="e.g. John Doe" required>
+                  <span class="form-error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="userEmail">Email Address <span class="req">*</span></label>
+                  <input type="email" id="userEmail" name="email" placeholder="john@company.com" required>
+                  <span class="form-error" id="emailError"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="projectType">Inquiry Type</label>
+                <select id="projectType" name="type">
+                  <option value="Full-Time Software Developer Role">Full-Time Software Developer Role</option>
+                  <option value="Junior / Associate Engineer Opportunity">Junior / Associate Engineer Opportunity</option>
+                  <option value="Java / Full-Stack Project">Java / Full-Stack Project</option>
+                  <option value="Technical Interview / Discussion">Technical Interview / Discussion</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage">Message or Job Opportunity <span class="req">*</span></label>
+                <textarea id="userMessage" name="message" rows="5" placeholder="Share job requirements, company details, or project scope..." required></textarea>
+                <span class="form-error" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitContactBtn">
+                <span class="btn-text">Send Message to Clifton</span>
+                <span class="btn-icon">⚡</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="code-bracket">&lt;</span>Clifton<span class="accent-text">.Dev</span><span class="code-bracket"> /&gt;</span>
+        </a>
+        <p class="footer-copy">&copy; 2026 Clifton Danish. Computer Science Engineer &bull; Chennai, Tamil Nadu.</p>
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to Top">
+          <span>Back to Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div class="modal" id="caseStudyModal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-dialog glass-panel">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+      <div class="modal-content" id="modalDynamicContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Preview Modal -->
+  <div class="modal" id="resumeModal" aria-hidden="true" role="dialog">
+    <div class="modal-backdrop" id="resumeModalBackdrop"></div>
+    <div class="modal-dialog modal-lg glass-panel">
+      <button class="modal-close" id="resumeCloseBtn" aria-label="Close resume preview">&times;</button>
+      <div class="resume-preview-container">
+        <div class="resume-header">
+          <div>
+            <h2>CLIFTON DANISH</h2>
+            <p class="resume-sub">Computer Science Engineer &bull; Software Developer</p>
+            <p style="color: var(--text-dim); font-size: 0.85rem; margin-top: 4px;">Chennai, Tamil Nadu - 600063 &bull; +91 936-181-2603 &bull; cliftondanish3@gmail.com</p>
+          </div>
+          <a href="Clifton_Danish_Resume.pdf" download="Clifton_Danish_Resume.pdf" class="btn btn-primary btn-sm" id="downloadResumeBtn" target="_blank">
+            Download Official Resume (PDF)
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+        <hr class="resume-divider">
+        <div class="resume-body-content">
+          <section class="r-section">
+            <h4>Career Objective</h4>
+            <p>Detail-oriented and motivated Software Developer with a strong foundation in computer science principles, complemented by hands-on project experience in web development and database management. Proficient in front-end technologies including HTML, CSS, and JavaScript, as well as back-end programming with Java and SQL. A graduate eager to contribute technical skills and innovative solutions in a dynamic software development environment.</p>
+          </section>
+
+          <section class="r-section">
+            <h4>Technical Skills</h4>
+            <p><strong>Web Technologies:</strong> HTML, CSS, JavaScript</p>
+            <p><strong>Programming Languages:</strong> Java, SQL</p>
+            <p><strong>Soft Skills:</strong> Time Management, Problem Solving, Decision Making</p>
+            <p><strong>Languages Spoken:</strong> English, Tamil</p>
+          </section>
+
+          <section class="r-section">
+            <h4>Professional Work Experience</h4>
+            <div style="margin-bottom: 14px;">
+              <p><strong>Backend Python Developer &mdash; Stackly</strong> (November 2025 &mdash; Present)<br>
+              &bull; Architecting and maintaining high-performance asynchronous RESTful APIs using FastAPI and Python.<br>
+              &bull; Designing optimized SQL queries, database migrations, and data access layers for scalable multi-tenant services.<br>
+              &bull; Leveraging Pydantic for rigorous request/response data validation, error handling, and automated API specs.<br>
+              &bull; Actively collaborating in cross-functional backend engineering sprints, code reviews, and system integration testing.</p>
+            </div>
+          </section>
+          <section class="r-section">
+            <h4>Featured Projects</h4>
+            <div style="margin-bottom: 12px;">
+              <p><strong>Job Portal</strong> &mdash; <em>HTML, CSS, JavaScript, SQL</em><br>Developed a fully functional job portal that connects job seekers with employers. Utilized HTML, CSS and JavaScript for front-end development, creating a responsive and user-friendly interface. Implemented database interactions using SQL to manage job listings and user profiles.</p>
+            </div>
+            <div style="margin-bottom: 12px;">
+              <p><strong>Inventory Management System</strong> &mdash; <em>Java, SQL</em><br>Designed and developed an inventory management application that helps businesses track stock levels and manage orders. Employed Java for backend development, ensuring efficient data processing and retrieval. Collaborated with peers to complete system testing and validation, resulting in a reliable application.</p>
+            </div>
+            <div style="margin-bottom: 12px;">
+              <p><strong>E-commerce Project</strong> &mdash; <em>Java, SQL, HTML, CSS, JavaScript</em><br>Contributed to the development of an e-commerce platform that facilitates online transactions. Integrated user authentication and payment processing using Java and SQL. Achieved a seamless user experience by enhancing web interface elements with HTML, CSS, and JavaScript.</p>
+            </div>
+          </section>
+
+          <section class="r-section">
+            <h4>Certifications</h4>
+            <p>&bull; <strong>Database Programming on SQL</strong> &mdash; Oracle Academy</p>
+            <p>&bull; <strong>Front End Web Development</strong> &mdash; Rinex Technologies</p>
+            <p>&bull; <strong>Java Full Stack Completion</strong> &mdash; Wipro TalentNext</p>
+          </section>
+
+          <section class="r-section">
+            <h4>Education</h4>
+            <p><strong>Bachelor of Engineering in Computer Science and Engineering</strong><br>Rajalakshmi Engineering College &bull; 7.58 CGPA &bull; 2020 &mdash; 2024</p>
+            <p><strong>Central Board of Secondary Education (CBSE) &bull; Class XII</strong><br>Francis Xavier's School &bull; 76.6% &bull; 2019 &mdash; 2020</p>
+            <p><strong>State Board &bull; Class X</strong><br>St. Xavier's Matric. Hr. Sec. School &bull; 87.6% &bull; 2017 &mdash; 2018</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
